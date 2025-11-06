@@ -153,6 +153,22 @@ This component runs end-to-end model benchmarks on the LongBench suite.
 
     We currently support Llama-2 7B and Llama-3 8B for our kernel. Additional model support will soon be released. 
     
+---
+
+## Citation
+
+If you use Mustafar in your research, please cite:
+
+```bibtex
+@article{mustafar2025,
+  title={Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference},
+  author={Donghyeon Joo, Helya Hosseini, Ramyad Hadidi, Bahar Asgari},
+  booktitle={Proceedings of the 39st International Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2025}
+}
+```
+
+---
 
 ## Acknowledgments
 

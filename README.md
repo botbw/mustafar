@@ -1,7 +1,7 @@
 # Mustafar: Promoting Unstructured Sparsity for KV Cache Pruning in LLM Inference
 
 <p align="center">
-  <img src="figs/top_level.png" alt="MUSTAFAR Architecture" width="600">
+  <img src="figs/top_level.png?v=2" alt="MUSTAFAR Architecture" width="600">
 </p>
 
 Lord Vader approves of unstructured sparsity in KV cache. 

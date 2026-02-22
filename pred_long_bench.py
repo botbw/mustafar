@@ -140,14 +140,14 @@ if __name__ == '__main__':
             #select the pruning method to use. 
             #from models.llama_mustafar_Kt_Mag_Vc_Mag import LlamaForCausalLM_MUSTAFAR
             #from models.llama_mustafar_Kt_Mag_Vc_Opa import LlamaForCausalLM_MUSTAFAR
-            from models.llama_mustafar_Kt_Mag_Vt_Mag import LlamaForCausalLM_MUSTAFAR
+            # from models.llama_mustafar_Kt_Mag_Vt_Mag import LlamaForCausalLM_MUSTAFAR
             #from models.llama_mustafar_Kt_Mag_Vt_Opa import LlamaForCausalLM_MUSTAFAR
             #from models.llama_mustafar_Kt_Opa_Vt_Mag import LlamaForCausalLM_MUSTAFAR
             #from models.llama_think import LlamaForCausalLM_MUSTAFAR
             #from models.llama_thinv import LlamaForCausalLM_MUSTAFAR
             
             #kernel version. 
-            #from models.llama_mustafar_kernel import LlamaForCausalLM_MUSTAFAR
+            from models.llama_mustafar_kernel import LlamaForCausalLM_MUSTAFAR
 
 
             #print("Using the V-per-token pruning model.")
@@ -198,7 +198,7 @@ if __name__ == '__main__':
             "gov_report", "qmsum", "multi_news", "trec", "triviaqa", "samsum", \
             "passage_count", "passage_retrieval_en", "lcc", "repobench-p"]
     
-    datasets = ["narrativeqa"]
+    # datasets = ["narrativeqa"]
 
     # we design specific prompt format and max generation length for each task, feel free to modify them to optimize model output
     dataset2prompt = json.load(open("config/dataset2prompt.json", "r"))

@@ -18,7 +18,11 @@ torch_lib_path = os.path.join(site_packages, 'torch', 'lib')
 if not os.path.exists(torch_lib_path):
     raise RuntimeError(f"Could not find torch lib directory at {torch_lib_path}")
 
-os.environ["TORCH_CUDA_ARCH_LIST"] = "Ada"  
+current_dir = os.path.dirname(os.path.abspath(__file__))
+build_dir = os.path.abspath(os.path.join(current_dir, "../build"))
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+build_dir = os.path.abspath(os.path.join(current_dir, "../build"))
 
 setup(
     name='mustafar_batched_spmv_package', #pip package name
@@ -27,8 +31,8 @@ setup(
         CUDAExtension(
             name='mustafar_package', #import module name
             sources=['pybind.cpp', 'mustafar_wrapper.cu'], 
-            extra_objects=['../build/SpMM_API.o'],          
-            include_dirs=[torch.utils.cpp_extension.include_paths(), '../build'],  
+            extra_objects=[os.path.join(build_dir, 'SpMM_API.o')],          
+            include_dirs=[torch.utils.cpp_extension.include_paths(), build_dir],  
             extra_link_args=[f"-L{torch_lib_path}", "-lc10"],
         )
     ],
